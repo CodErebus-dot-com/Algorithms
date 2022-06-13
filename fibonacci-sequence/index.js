@@ -1,21 +1,13 @@
-const initialValue = 0;
-
 function fibonacci(n) {
   const fib = [0, 1];
   for (let i = 2; i < n; i++) {
     fib[i] = fib[i - 1] + fib[i - 2];
   }
-
-  const sum = fib.reduce(
-    (prevValue, currValue) => prevValue + currValue,
-    initialValue
-  );
-  console.log(`Sequence for n = ${n}: `, fib);
-  console.log(`Sum for n = ${n}: `, sum);
+  return fib;
 }
 
-fibonacci(2);
-fibonacci(3);
-fibonacci(7);
+console.log(fibonacci(2));
+console.log(fibonacci(3));
+console.log(fibonacci(7));
 
 // Big-O = O(n)
